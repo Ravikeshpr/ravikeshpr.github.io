@@ -21,7 +21,7 @@
 
 
 .showcase{
-  background: url(../img/showcase.jpeg) no-repeat -400px -600px;
+  background: url(../img/showcase.jpeg) no-repeat;
   padding: 30px 0;
   padding-right: 40px;
 
@@ -62,18 +62,51 @@
     font-size: $icon-size;
   }
   
-.containerTile {
-  width: 200px;
-  height: 300px;  
-  background: url("https://i.pinimg.com/564x/6f/5a/b1/6f5ab1b470beeeeaf285bb451c63ac8f.jpg");
-  background-color: black;
-  background-size: cover;
-  cursor: pointer;
-  
+%containerTile {
+  width: 100%;
+  height: 300px;
+  text-align:center;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  margin: 20px;
   -webkit-box-shadow: 0 0 5px #000;
         box-shadow: 0 0 5px #000;
   }
 
+.angularTile {
+    @extend %containerTile;
+    background-image: url(../img/angular.png);
+}
+.reactTile {
+    @extend %containerTile;
+    background-image: url(../img/react.png);
+}
+.bootstrapTile {
+    @extend %containerTile;
+    background-image: url(../img/bootstrap4.png);
+}
+.sassTile {
+    @extend %containerTile;
+    background-image: url(../img/sass.png);
+}
+.jqueryTile {
+    @extend %containerTile;
+    background-image: url(../img/jquery.png);
+}
+.reduxTile {
+    @extend %containerTile;
+    background-image: url(../img/redux.png);
+}
+.es6Tile {
+    @extend %containerTile;
+    background-image: url(../img/es6.png);
+}
+  .nodeTile {
+    @extend %containerTile;
+    background-image: url(../img/node.png);
+  }
 .overlay {
   width: 100%;
   height: 100%;
@@ -101,7 +134,7 @@
   line-height: 40px;
   
   transform: translateY(40px);
-  transition: all 0.7s;
+  transition: all 1.0s;
   hr {
     display: block;
     width: 0;
@@ -109,22 +142,17 @@
     border: none;
     border-bottom: solid 2px $main-color;
     
-    position: absolute;
-    bottom: 0; left:20px;
-    
     transition: all .5s;
   }
 }
 
-.price {
-  font-size: 22px;
-  line-height: 10px;
+.details {
+  font-size: 16px;
   font-weight: bold;  
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.7s;
-  .old {
-    text-decoration: line-through;
+  .item1 {
     color: lighten(rgb(77, 77, 77),40%);
   }
 }
@@ -144,18 +172,18 @@
   }
 }
 
-.containerTile:hover .overlay {
+%containerTile:hover .overlay {
   opacity: 1;
   & .head {
     transform: translateY(0px);
   }
   
   & hr {
-    width: 75px;
-    transition-delay: 0.4s;
+    width: 85%;
+    transition-delay: 0.8s;
   }
   
-  & .price {
+  & .details {
     transform: translateY(0px);
     transition-delay: 0.3s;
     opacity: 1;
