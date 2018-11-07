@@ -8801,8 +8801,7 @@ input[type=button].btn-block {
   margin-top: 40px;
 }
 .showcase .fa {
-  font-size: 45px;
-  margin-left: 15px;
+  font-size: 40px;
 }
 .showcase img {
   width: 40px;
@@ -8820,7 +8819,7 @@ input[type=button].btn-block {
   font-size: 60px;
 }
 .section-a .nodeTile, .section-a .es6Tile, .section-a .reduxTile, .section-a .jqueryTile, .section-a .sassTile, .section-a .bootstrapTile, .section-a .reactTile, .section-a .angularTile {
-  width: 100%;
+  width: 90%;
   height: 300px;
   text-align: center;
   background-color: transparent;
