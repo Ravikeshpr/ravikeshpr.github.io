@@ -8959,11 +8959,20 @@ input[type=button].btn-block {
 }
 
 /*Vertical Sliding*/
+
 .slidingVertical {
   display: inline;
   text-indent: 8px;
+
   /*topToBottom Animation*/
 }
+@media only screen and (max-width: 600px) {
+  .slidingVertical {
+    display: block;
+    height: 200px;
+  }
+  }
+
 .slidingVertical span {
   animation: topToBottom 12.5s linear infinite 0s;
   -ms-animation: topToBottom 12.5s linear infinite 0s;
